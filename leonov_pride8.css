@@ -1,6 +1,4 @@
-body{
-  font-family: 'Montserrat', sans-serif;
-}
-.header{
-  background: rgba(174, 35, 31, 0.8);
+.color.black {
+    background-color: #ffffff;
+    color: #ffffff;
 }
