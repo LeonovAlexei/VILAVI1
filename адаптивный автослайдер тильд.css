@@ -1,0 +1,79 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+(function () {
+	// Id блока, в котором будет слайдер
+	let block = $("#rec286812963");
+	// Class элемента, в котором будет находиться слайдер
+	let wrap = $(".tn-elem__2868129631614629945911");
+	// Id блоков, которые будут слайдами
+	let slides = $("#rec286813753, #rec286814365, #rec286814465, #rec286814525");
+
+	wrap.addClass("tildoshnaya-slider-owl");
+	let box = wrap.find(".tn-atom");
+	box.append('<div class="owl-carousel owl-theme"></div>');
+	slides.appendTo(block.find('.owl-carousel'));
+	let owl = wrap.find('.owl-carousel').owlCarousel({
+		// Зациклить слайдер - true
+		// Без зацикленности - false
+	    loop:true,
+	    nav:false,
+	    dots: false,
+	    // Колличество карточек
+	    items: 1,
+
+	    // Адаптивность
+	    responsive:{
+	    	// 0 это минимальная ширина экрана, при которой включается следующая часть кода
+	        // 0:{
+	        //	items: 1 это колличество слайдов на экране
+	        //     items:1
+	        // },
+	        0:{
+	            items:1
+	        },
+	        640:{
+	            items:1
+	        },
+	        960:{
+	            items:1
+	        },
+	    }
+	    // Адаптивность: конец
+	})
+
+
+	block.find("[href='#slider_left']").click(function(){
+		owl.trigger('prev.owl.carousel');
+	})
+	block.find("[href='#slider_right']").click(function(){
+		owl.trigger('next.owl.carousel');
+	})
+}());
+</script>
+
+
+<script>
+function auto_play() {  $("[href='#slider_right']").click()};
+var timemode = 4000; /* Скорость автослайдинга */
+var autoPlay = setInterval( auto_play, timemode );
+</script>
+
+
+<style>
+     /* Фоновое изображение */
+    /* Id блока, в котором будет слайдер */
+	#rec286812963  {
+	 background-image: url(https://modslab.net/redactor/upload-images/5fcfb7f38a232.png);
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	}
+
+</style>
+Адаптивный автоматический слайдер.txt
+Адаптивный автоматический слайдер.txt. На экране.
+https://www.youtube.com/watch?v=TY6sOWHKXAc
